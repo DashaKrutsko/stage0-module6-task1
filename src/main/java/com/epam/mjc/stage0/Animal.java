@@ -1,33 +1,35 @@
 package com.epam.mjc.stage0;
 
 public class Animal {
-    private String colour;
+    private String color;
     private int numberOfPaws;
     private boolean hasFur;
+//
+//    public static void main(String[] args) {
+//        Dog jack =new Dog();
+//        jack.setColour("brawn");
+//        jack.setNumberOfPaws(4);
+//        jack.setHasFur(true);
+//        System.out.println(jack.getDescription());
+//        Bird kesha = new Bird();
+//        kesha.setColour("blue");
+//        kesha.setNumberOfPaws(2);
+//        kesha.setHasFur(false);
+//        System.out.println(kesha.getDescription());
+//    }
 
-    public static void main(String[] args) {
-        Dog jack =new Dog();
-        jack.setColour("brawn");
-        jack.setNumberOfPaws(4);
-        jack.setHasFur(true);
-        System.out.println(jack.getDescription());
-        Bird kesha = new Bird();
-        kesha.setColour("blue");
-        kesha.setNumberOfPaws(2);
-        kesha.setHasFur(false);
-        System.out.println(kesha.getDescription());
+    public Animal(String color, int numberOfPaws, boolean hasFur) {
+        this.color = color;
+        this.numberOfPaws = numberOfPaws;
+        this.hasFur = hasFur;
     }
 
-    public Animal() {
-
+    public String getColor() {
+        return color;
     }
 
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getNumberOfPaws() {
@@ -49,7 +51,7 @@ public class Animal {
     public String getDescription(){
         String hasFur = (this.hasFur) ? " a ": " no ";
         String paw = (this.numberOfPaws>1)? " paws":" paw";
-        return "This animal is mostly " + this.colour + ". It has "+ this.numberOfPaws + paw +" and" + hasFur + "fur.";
+        return "This animal is mostly " + this.color + ". It has "+ this.numberOfPaws + paw +" and" + hasFur + "fur.";
     }
 }
 
